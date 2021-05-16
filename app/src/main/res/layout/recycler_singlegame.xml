@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp"
     android:padding="2dp"
-    android:layout_margin="5dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
     >
 
 
@@ -17,8 +18,8 @@
         >
         <ImageView
             android:id="@+id/gameimg"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="175dp"
             android:layout_margin="16dp"
             android:scaleType="centerCrop"/>
         <TextView

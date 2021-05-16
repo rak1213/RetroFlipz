@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/favFragment"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favourites" />
+    <item
+        android:id="@+id/parentalControlFragment"
+        android:icon="@drawable/ic_baseline_pest_control_rodent_24"
+        android:title="Parental Control" />
+</menu>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Retroflipz</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="parental_control">Hello Folks!Parental control helps the parents to set a valid screen time for their children
+        to be on this app.To use this push the on button and set a password that your children don\'t know.So
+        when the time is over the app stops and the password screen pops up.</string>
+    <string name="parental_control1">Parental Control</string>
+    <string name="game">game</string>
 </resources>
