@@ -7,4 +7,5 @@
         when the time is over the app stops and the password screen pops up.</string>
     <string name="parental_control1">Parental Control</string>
     <string name="game">game</string>
+    <string name="fileSharedPreference">Shared Preference</string>
 </resources>
