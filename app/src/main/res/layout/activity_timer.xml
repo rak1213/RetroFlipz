@@ -12,30 +12,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtSetTime"
         android:textSize="35sp"
         android:text="Set Time"
+        android:textStyle="bold"
        android:layout_alignParentTop="true"
         android:layout_margin="20dp"
         android:textAlignment="center"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/black"
         />
+        <ImageView
+            android:layout_below="@id/txtSetTime"
+            android:layout_width="243dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/retro_logo"
+            android:id="@+id/img"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/layoutTimer"
         android:weightSum="3"
-        android:layout_below="@id/txtSetTime">
+        android:layout_below="@id/img">
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/ethours"
-            android:hint="00"
+            android:hint="00 HRS"
             android:textSize="20sp"
             android:textAlignment="center"
             android:layout_margin="20dp"
@@ -58,28 +68,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/etminutes"
-            android:hint="00"
+            android:hint="00 MIN"
             android:textAlignment="center"
             android:layout_margin="20dp"
             android:textSize="20sp"
             android:inputType="number"
             />
     </LinearLayout>
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutTimer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:timePickerMode="spinner"
-        />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/timePicker"
+        android:layout_below="@id/layoutTimer"
         android:weightSum="3">
         <Button
             android:id="@+id/buttonAlarm"
@@ -87,26 +89,19 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:text="Set Alarm"
-            android:layout_weight="1"
+            android:text="Set TIMER"
+            android:layout_weight="1.75"
             android:layout_margin="10dp"/>
-        <Button
-            android:id="@+id/buttonUpdateAlarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="10dp"
-            android:text="Update Alarm"
-            android:layout_weight="1"/>
+
         <Button
             android:id="@+id/buttonCancelAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:text="Cancel Alarm"
+            android:text="Cancel TIMER"
             android:layout_margin="10dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1.2"/>
     </LinearLayout>
     </RelativeLayout>
 

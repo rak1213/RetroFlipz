@@ -23,19 +23,19 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         var view = inflater.inflate(R.layout.fragment_home, container, false)
 
         recyclerView = view.findViewById(R.id.recycler_games)
 
         layoutManager = LinearLayoutManager(requireContext())
         var gamelist = arrayListOf<Games>()
-        gamelist.add(Games("simon", "https://rak1213.github.io/Simon-Game/", "sdcd"))
-        gamelist.add(Games("Light it up!", "https://rak1213.github.io/light-it-up/", "sdcd"))
-        gamelist.add(Games("2048", "https://rak1213.github.io/2048/", "sdcd"))
-        gamelist.add(Games("Decody", "https://tejasvibhutiyal.github.io/decodyV1/", "sdcd"))
-        gamelist.add(Games("Life Guard", "https://tejasvibhutiyal.github.io/saveV1/", "sdcd"))
-        gamelist.add(Games("Scroller", "https://ravish22.github.io/Game/Scroller/", "sdcd"))
+        gamelist.add(Games(1,"simon", "https://rak1213.github.io/Simon-Game/", "sdcd","w"))
+        gamelist.add(Games(2,"Light it up!", "https://rak1213.github.io/light-it-up/", "sdcd","s"))
+        gamelist.add(Games(3,"2048", "https://rak1213.github.io/2048/", "sdcd","s"))
+        gamelist.add(Games(4,"Decody", "https://tejasvibhutiyal.github.io/decodyV1/", "sdcd","d"))
+        gamelist.add(Games(5,"Life Guard", "https://tejasvibhutiyal.github.io/saveV1/", "sdcd","d"))
+        gamelist.add(Games(6,"Scroller", "https://ravish22.github.io/Game/Scroller/", "sdcd","d"))
         adapter = GamesAdapter(requireContext(), gamelist)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
