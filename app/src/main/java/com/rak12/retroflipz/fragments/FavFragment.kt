@@ -49,19 +49,19 @@ class FavFragment : Fragment() {
 
 
 
-            if ((restlist1?.isEmpty())!!) {
-                pl1.visibility = View.GONE
-                rlNoFav.visibility = View.VISIBLE
+        if ((restlist1?.isEmpty())!!) {
+            pl1.visibility = View.GONE
+            rlNoFav.visibility = View.VISIBLE
 
-            } else {
-                pl1.visibility = View.GONE
-                rlNoFav.visibility = View.GONE
+        } else {
+            pl1.visibility = View.GONE
+            rlNoFav.visibility = View.GONE
 
-                adapter1 = FavAdapter(activity as Context, restlist1)
-                rv1.layoutManager = lay
-                rv1.adapter = adapter1
+            adapter1 = FavAdapter(activity as Context, restlist1)
+            rv1.layoutManager = lay
+            rv1.adapter = adapter1
 
-            }
+        }
         return view
     }
     class Favresr(val context: Context) : AsyncTask<Void, Void, List<GamesEntity>>() {

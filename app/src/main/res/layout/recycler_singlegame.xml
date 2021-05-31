@@ -3,34 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="15dp"
     android:padding="2dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    app:cardElevation="10dp"
     >
 
 
     <RelativeLayout
         android:id="@+id/onerow"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/gameimg"
-            android:layout_width="150dp"
-            android:layout_height="175dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_margin="16dp"
+            android:layout_centerVertical="true"
             android:scaleType="centerCrop"/>
         <TextView
             android:id="@+id/gamename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-          android:layout_toRightOf="@+id/gameimg"
-android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/gameimg"
+            android:layout_centerVertical="true"
             android:text="List item"
             android:textSize="20sp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="10dp"
             android:textStyle="bold"
             android:textColor="#000"
             android:padding="10dp"/>
@@ -39,6 +39,7 @@ android:layout_centerInParent="true"
             android:id="@+id/imgIsFav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="108dp"

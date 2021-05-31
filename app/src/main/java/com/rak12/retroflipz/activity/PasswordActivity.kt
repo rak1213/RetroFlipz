@@ -20,7 +20,7 @@ class PasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password)
-      //  imgLogo=findViewById(R.id.imgLogo1)
+        //  imgLogo=findViewById(R.id.imgLogo1)
         txtPassword=findViewById(R.id.txtPassword)
         etPassword=findViewById(R.id.etPassword)
         btnPassword=findViewById(R.id.btnPassword)

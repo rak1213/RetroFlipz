@@ -36,13 +36,13 @@ class GamesAdapter(val context: Context,var arrayList: ArrayList<Games>):Recycle
 
     override fun onBindViewHolder(holder: Vh, position: Int) {
 
-       var data=arrayList[position]
+        var data=arrayList[position]
         Picasso.get().load(data.image).error(R.drawable.ic_baseline_videogame_asset_24).into(holder.img)
-            holder.gamename.text=data.gamename
+        holder.gamename.text=data.gamename
         var link=data.link
         var id = data.id
         holder.onerow.setOnClickListener {
-           Toast.makeText(context,"clicked",Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"clicked",Toast.LENGTH_LONG).show()
             Log.d("clicked", link)
             val intent=Intent(context,GameshowActivity::class.java)
             intent.putExtra("url",link)

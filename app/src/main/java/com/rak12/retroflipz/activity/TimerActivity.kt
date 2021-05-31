@@ -34,7 +34,7 @@ class TimerActivity : AppCompatActivity() {
 
         ethours=findViewById(R.id.ethours)
         etminutes=findViewById(R.id.etminutes)
-         firstscreen=findViewById(R.id.firstscreen)
+        firstscreen=findViewById(R.id.firstscreen)
 
         context=this
         alarmManager=getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -57,7 +57,7 @@ class TimerActivity : AppCompatActivity() {
 
             val thread=Thread{
 
-             val intent2=Intent(context,PasswordActivity::class.java)
+                val intent2=Intent(context,PasswordActivity::class.java)
 
 
 
@@ -89,7 +89,7 @@ class TimerActivity : AppCompatActivity() {
         override fun onReceive(context: Context?, intent: Intent?) {
             Log.d("TimerActivity","Receiver:"+ Date().toString())
 
-           Toast.makeText(context,"Here it is",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"Here it is",Toast.LENGTH_SHORT).show()
 
         }
 

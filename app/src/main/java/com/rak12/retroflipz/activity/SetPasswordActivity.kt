@@ -21,7 +21,7 @@ class SetPasswordActivity : AppCompatActivity() {
         sp=getSharedPreferences(
             R.string.fileSharedPreference.toString(),
             MODE_PRIVATE)
-       btnNext=findViewById(R.id.btnNext)
+        btnNext=findViewById(R.id.btnNext)
         btnNext.setOnClickListener {
             if(etEnterPassword.text.toString()==etConfirmPassword.text.toString()){
                 sp.edit().putString("password",etEnterPassword.text.toString()).commit()

@@ -24,34 +24,34 @@ import java.util.*
 class ParentalControlFragment : Fragment() {
     lateinit var alarmManager:AlarmManager
 
-lateinit var button:SwitchCompat
+    lateinit var button:SwitchCompat
 
 
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         var view=inflater.inflate(R.layout.fragment_parental_control, container, false)
 
         alarmManager = requireActivity().getSystemService(ALARM_SERVICE) as AlarmManager
-     button=view.findViewById(R.id.parentcontrolswitch)
-       button.setOnCheckedChangeListener { buttonView, isChecked ->
-           if(isChecked){
-               Toast.makeText(requireContext(), "Enabled", Toast.LENGTH_SHORT).show()
-               val intent=Intent(view.context, SetPasswordActivity::class.java)
-               startActivity(intent)
-           }
-           else{
+        button=view.findViewById(R.id.parentcontrolswitch)
+        button.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked){
+                Toast.makeText(requireContext(), "Enabled", Toast.LENGTH_SHORT).show()
+                val intent=Intent(view.context, SetPasswordActivity::class.java)
+                startActivity(intent)
+            }
+            else{
 
-               val intent= Intent(context, TimerActivity.Receiver::class.java)
-               val pendingIntent= PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-               Log.d("TimerActivity", "cancel :" + Date().toString())
-               alarmManager.cancel(pendingIntent)
+                val intent= Intent(context, TimerActivity.Receiver::class.java)
+                val pendingIntent= PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                Log.d("TimerActivity", "cancel :" + Date().toString())
+                alarmManager.cancel(pendingIntent)
 
-               Toast.makeText(requireContext(), "Disabled", Toast.LENGTH_SHORT).show()
-           }
-       }
+                Toast.makeText(requireContext(), "Disabled", Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
 

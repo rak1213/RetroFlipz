@@ -39,7 +39,7 @@ class GameshowActivity : AppCompatActivity() {
         myWebView.settings.javaScriptEnabled = true
         myWebView.settings.allowContentAccess=true
         myWebView.getSettings().setUseWideViewPort(true);
-             myWebView.setInitialScale(1);
+        myWebView.setInitialScale(1);
         //myWebView.settings.useWideViewPort=true
         myWebView.settings.domStorageEnabled=true
 

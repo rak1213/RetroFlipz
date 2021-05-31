@@ -10,13 +10,11 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.rak12.retroflipz.R
 import com.rak12.retroflipz.activity.GameshowActivity
 import com.rak12.retroflipz.database.GamesEntity
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class FavAdapter(val context: Context, val list: List<GamesEntity>) :
     RecyclerView.Adapter<FavAdapter.FavViewholde>() {
