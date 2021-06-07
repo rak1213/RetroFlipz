@@ -1,5 +1,7 @@
 package com.rak12.retroflipz.activity
 
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RelativeLayout
@@ -18,10 +20,17 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
+    lateinit var sp: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        sp=getSharedPreferences(
+            R.string.fileSharedPreference.toString(),
+            MODE_PRIVATE)
+        if(sp.getBoolean("passwordentered",true)){
+            val intent=Intent(this,PasswordActivity::class.java)
+            startActivity(intent)
+        }
         navController=findNavController(R.id.navHostFragment)
         val appBarConfiguration= AppBarConfiguration(
             setOf(

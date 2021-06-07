@@ -27,6 +27,7 @@ class PasswordActivity : AppCompatActivity() {
         sp=getSharedPreferences(R.string.fileSharedPreference.toString(), MODE_PRIVATE)
         btnPassword.setOnClickListener {
             if(etPassword.text.toString()==sp.getString("password","0")){
+               sp.edit().putBoolean("passwordentered",false).commit()
                 val intent=Intent(this,MainActivity::class.java)
                 startActivity(intent)
             }else{
